@@ -1,0 +1,170 @@
+@import vars
+@import fonts
+@import libs
+// Critical css
+::placeholder
+  color: #666
+::selection
+  color: #fff
+input, textarea
+  outline: none
+  &:focus
+    color: #000
+html
+  height: 100%
+*
+  margin: 0
+  padding: 0
+a,button
+  cursor: pointer
+a
+  text-decoration: none
+  color: #000
+a:hover
+  color: $primary-color
+body,#app
+  min-width: 320px
+  max-width: 2560px
+  height: 100%
+  position: relative
+  overflow-x: hidden
+  color: #000
+  background-color: $white
+  @include selectFont('Roboto',400,16px,1.65)
+img
+  max-width: 100%
+.hidden
+  display: none
+// containers
+.container
+  width: 100%
+  height: 100%
+  background: linear-gradient(to right,#54c8bd 0%,#6364d2 55%,#1840a5 100%)
+.flex-container
+  display: flex
+  justify-content: space-between
+//Sidebar
+.sidebar
+  background-color: $white
+  width: 300px
+  height: 100%
+.sidebar-padding
+  padding-bottom: 20px
+  padding-left: 20px
+  padding-right: 20px
+.nav
+  @include list-type-none
+  .nav-item
+    text-align: center
+    margin: 15px 0
+.router-link-active
+  color: #ef6c00
+.logo
+  margin-top: 20px
+  border-bottom: 1px solid gainsboro
+.avatar
+  width: 80px
+  height: 80px
+  border-radius: 50%
+  overflow: hidden
+  margin: 20px auto
+.user-email
+  text-align: center
+  width: 100%
+  @include control-text
+.sign-out
+  display: block
+  @include reset-button
+  background-color: $white
+  margin: 20px auto 0 auto
+.sign-out:hover
+  color: #ef6c00
+.user-container
+  border-bottom: 1px solid gainsboro
+//404 Page
+.not-fount-text
+  width: 100%
+.not-found-title,.not-found-subtitle
+  text-align: center
+  color: $white
+.not-found-title
+  margin: 0
+  font-size: 10em
+.not-found-subtitle
+  font-size: 2em
+//SignIn Page
+.signin-container,.not-found-container,.content-container
+  display: flex
+  justify-content: center
+  align-items: center
+  height: 100%
+.btn-submit
+  display: block
+  cursor: pointer
+  width: 280px
+  line-height: 50px
+  height: 50px
+  border-radius: 25px
+  @include reset-button
+  color: #ffff
+  font-weight: bold
+  background: linear-gradient(to right,#ff9449 0%,#ff594a 100%)
+  transition: all 1.2s ease-in-out
+.btn-submit:hover
+  text-shadow: 0 0 5px rgba(255,255,255,.22)
+  background: linear-gradient(to right,#ff594a 0%,#ff9449 100%)
+  transform: scale(1.2)
+//Settings
+.settings-form
+  background-color: $white
+  border-radius: 15px
+  overflow: hidden
+  padding: 20px
+  box-shadow: 0 2px 10px 0px #5a5858
+.settings-item label
+  width: 100%
+  display: block
+  margin-bottom: 5px
+  position: relative
+.settings-item label::before
+  content: '*'
+  color: red
+  margin-left: -10px
+  padding-right: 5px
+  vertical-align: text-bottom
+.settings-item
+  margin-bottom: 15px
+.settings-form-item
+  display: block
+  @include reset-button
+  width: 100%
+  border: 1px solid gainsboro
+  padding: 5px
+  border-radius: 5px
+.settings-submit
+  margin: 0 auto
+//Статистика
+.statistic-container
+  padding: 20px
+.statistic-item
+  background-color: $white
+  margin-bottom: 20px
+  border-radius: 15px
+  overflow: hidden
+  padding: 15px
+.btn-status
+  @include reset-button
+  width: 35px
+  height: 35px
+  border-radius: 50%
+.btn-status.btn-ok
+  cursor: not-allowed
+  background-color: #67f267
+.btn-status.btn-error
+  cursor: pointer
+  background-color: #ff1e1e
+  animation: error 1s ease infinite
+.statistic-error-message
+  padding-top: 10px
+@import "animation.sass"
+@import "media.sass"
